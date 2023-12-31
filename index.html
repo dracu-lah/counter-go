@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title></title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="css/style.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/htmx.org@1.9.10"
+    integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+    crossorigin="anonymous"></script>
+</head>
+
+<body class="flex justify-center items-center min-h-screen gap-x-4">
+  <button class="p-4 bg-blue-400" hx-target="#counter" hx-post="/decrease">-</button>
+  <div id="counter">{{.CounterValue}}</div>
+  <button class="p-4 bg-blue-400" hx-target="#counter" hx-post="/increase">+</button>
+</body>
+
+</html>
